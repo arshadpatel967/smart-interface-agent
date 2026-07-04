@@ -18,7 +18,7 @@
     <!-- This button has an intentional typo in the JavaScript function name to test our AI! -->
     <button onclick="triggerBrokenFunction()">Click to Test App</button>
 
-    <script>
+        <script>
         function triggerBrokenFunction() {
             try {
                 // This function doesn't exist, so it will throw an error!
@@ -27,10 +27,10 @@
                 alert("Oops! A bug happened. Sending to database for the AI to fix...");
                 
                 // Send the error automatically to your Supabase database
-                fetch('YOUR_SUPABASE_URL/rest/v1/error_logs', {
+                fetch('https://tyjhmkrkbfckcpqxumpe.supabase.co/rest/v1/error_logs', {
                     method: 'POST',
                     headers: {
-                        'apikey': 'https://tyjhmkrkbfckcpqxumpe.supabase.co',
+                        'apikey': 'YOUR_ANON_KEY_HERE',
                         'Content-Type': 'application/json',
                         'Prefer': 'return=minimal'
                     },
@@ -42,6 +42,7 @@
             }
         }
     </script>
+
 </body>
 </html>
 
